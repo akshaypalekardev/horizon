@@ -1,0 +1,82 @@
+.option{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Priority */
+
+.low-dot {
+  height: 15px;
+  width: 15px;
+  background-color:#7FB3D5;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.medium-dot {
+  height: 15px;
+  width: 15px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.high-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #F7DC6F;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.critical-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #E74C3C;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Status */
+
+.draft-dot {
+  height: 15px;
+  width: 15px;
+  background-color:#95A5A6;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.wip-dot {
+  height: 15px;
+  width: 15px;
+  background-color:#0099ff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.done-dot {
+  height: 15px;
+  width: 15px;
+  background-color:#58D68D;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.stuck-dot {
+  height: 15px;
+  width: 15px;
+  background-color: Red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.onHold-dot {
+  height: 15px;
+  width: 15px;
+  background-color:#666699;
+  border-radius: 50%;
+  display: inline-block;
+}
+

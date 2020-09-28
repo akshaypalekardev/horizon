@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let task of taskList" cdkDrag>
+      <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+      <div class="taskText">
+      <span class="material-icons ">drag_indicator</span>
+      {{task.todo}}
+    </div>
+      <div class="taskOptionList">
+      <span *ngIf="task.priority == 'Low'" matTooltip="Priority" class="badge badge-pill low-priority">Low</span>
+      <span *ngIf="task.priority == 'Medium'" matTooltip="Priority" class="badge badge-pill medium-priority">Medium</span>
+      <span *ngIf="task.priority == 'High'" matTooltip="Priority" class="badge badge-pill high-priority">High</span>
+      <span *ngIf="task.priority == 'Critical'" matTooltip="Priority" class="badge badge-pill critical-priority">Critical</span>
+
+      <span matTooltip="Due Date" class="dueDate">{{task.dueDate.toLocaleString('default', {month: 'long'}) + ' ' + task.dueDate.getDate() + ', ' + task.dueDate.getFullYear() }}</span>
+
+      <span *ngIf="task.status == 'Draft'" matTooltip="Status" class="badge badge-secondary draft-status">Draft</span>
+      <span *ngIf="task.status == 'Wip'" matTooltip="Status" class="badge badge-secondary wip-status">Work in Progress</span>
+      <span *ngIf="task.status == 'Done'" matTooltip="Status" class="badge badge-secondary done-status">Done</span>
+      <span *ngIf="task.status == 'Stuck'" matTooltip="Status" class="badge badge-secondary stuck-status">Stuck</span>
+      <span *ngIf="task.status == 'Hold'" matTooltip="Status" class="badge badge-secondary hold-status">Hold</span>
+
+
+      <span matTooltip="Edit" class="material-icons edit" (click)="openEditModal(task)">edit</span>
+      <span class="material-icons delete" (click)="openDeleteModal(task.id)">delete</span>
+    </div>
+    </div>
+  </div>
+</div>

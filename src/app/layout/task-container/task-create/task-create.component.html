@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <form (submit)="onSubmit(taskForm)" #taskForm="ngForm">
+    <div class="row">
+      <div class="col-xs-9 col-lg-12">
+        <input type="text" class="form-control" id="inlineFormInput" placeholder="Add a task" ngModel
+          name="taskInputField" #taskField="ngModel" required>
+      </div>
+    </div>
+  </form>
+</div>
